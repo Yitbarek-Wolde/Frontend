@@ -15,7 +15,6 @@ function LoginSignup() {
                     headers: { 'Content-Type': 'application/json' },
                 }
             );
-            console.log(response?.data);
             if(!response.data.success){
                 alert(response.data.data)
             }
