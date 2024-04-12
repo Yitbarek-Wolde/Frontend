@@ -13,12 +13,12 @@ function LoginSignup() {
                 { ...loginData},
                 {
                     headers: { 'Content-Type': 'application/json' },
-                    // withCredentials: true
                 }
             );
             console.log(response?.data);
-            // console.log(response?.accessToken);
-            // console.log(JSON.stringify(response))
+            if(!response.data.success){
+                alert(response.data.data)
+            }
         
         } catch (err) {
             console.log(err + " came here")
